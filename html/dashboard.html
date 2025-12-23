@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대시보드 가이드 - 대체기기 관리 시스템</title>
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 상단 헤더 -->
+        <header class="top-header">
+            <div class="header-left">
+                <h1>대체기기 관리 시스템</h1>
+                <span class="subtitle">사용 가이드</span>
+            </div>
+            <nav class="tab-menu">
+                <a href="index.html" class="tab-item">등록 및 수정</a>
+                <a href="dashboard.html" class="tab-item">대시보드</a>
+                <a href="entries.html" class="tab-item">대체기기 목록</a>
+            </nav>
+        </header>
+
+        <!-- 메인 컨텐츠 -->
+        <main class="main-content">
+            <!-- 왼쪽 목차 -->
+            <aside class="toc">
+                <nav class="toc-nav">
+                    <ul class="toc-list">
+                        <li><a href="#section-overview" class="toc-link">대시보드 전체 화면</a></li>
+                        <li>
+                            <a href="#section-details" class="toc-link">대시보드 상세 구성</a>
+                            <ul class="toc-sublist">
+                                <li><a href="#section-status" class="toc-link">최근 60일 발송현황</a></li>
+                                <li><a href="#section-download" class="toc-link">현황판 다운로드</a></li>
+                                <li><a href="#section-delay" class="toc-link">모니터링 필요 지연건</a></li>
+                                <li><a href="#section-monthly" class="toc-link">월별 발송 건수</a></li>
+                                <li><a href="#section-department" class="toc-link">소속 부서 발송건</a></li>
+                                <li><a href="#section-notice" class="toc-link">공지사항</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- 오른쪽 컨텐츠 -->
+            <div class="content-wrapper">
+                <!-- 대시보드 전체 화면 섹션 -->
+                <section class="section" id="section-overview">
+                    <h3>대시보드 전체 화면</h3>
+                
+                <div class="step-guide">
+                    <div class="step">
+                        <p>대시보드는 다음 항목으로 구성되어 있으며, 30초마다 자동으로 업데이트되어 최신 데이터가 반영됩니다.</p>
+                        <ol>
+                            <li><strong>최근 60일 대체기기 발송현황</strong></li>
+                            <li><strong>대시보드 전체 내역 다운로드</strong></li>
+                            <li><strong>모니터링 필요 지연건</strong></li>
+                            <li><strong>월별 발송 건수</strong></li>
+                            <li><strong>소속 부서 발송 건</strong></li>
+                            <li><strong>공지사항</strong></li>
+                        </ol>
+                        <div class="screenshot">
+                            <img src="https://raw.githubusercontent.com/skyhigh79/image_dashboard/main/dashboard_00.png" alt="대시보드 전체 화면 상단">
+                            <img src="https://raw.githubusercontent.com/skyhigh79/image_dashboard/main/dashboard_01.png" alt="대시보드 전체 화면 하단">
+                            <p class="screenshot-caption">대시보드 전체 화면</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+                <!-- 대시보드 상세 구성 섹션 -->
+                <section class="section" id="section-details">
+                    <h3>대시보드 상세 구성</h3>
+                    
+                    <div class="step-guide">
+                        <div class="step" id="section-status">
+                            <h4>최근 60일 대체기기 발송현황</h4>
+                        <p>60일 이내 발송된 건을 카드별로 확인할 수 있으며, 발송 후 60일이 지난 건은 노출되지 않습니다.</p>
+                        <p>수정 모달창에 입력된 값에 해당하는 카드에 발송건이 표시됩니다.</p>
+                        <p>각 카드의 의미는 다음과 같습니다.</p>
+                        <ul>
+                            <li><strong>전체 발송건:</strong> 최근 60일간 발송된 모든 대체기기 발송건</li>
+                            <li><strong>AS 진행 중:</strong> 대체기기 수령일이 값이 입력되었지만, 대체기기 회수접수일은 입력되지 않은 건</li>
+                            <li><strong>회수 필요:</strong> 대체기기 회수접수일이 입력되었지만, 대체기기 회수완료일은 입력되지 않은 건</li>
+                            <li><strong>회수 완료:</strong> 대체기기 회수완료일이 입력되어 종료된 건</li>
+                            <li><strong>30일 경과 확인 필요건:</strong> 등록일로부터 30일이 경과하였지만 아직 회수 완료되지 않은 건</li>
+                        </ul>
+                        <div class="screenshot">
+                            <img src="https://raw.githubusercontent.com/skyhigh79/image_dashboard/main/dashboard_02.png" alt="최근 60일 대체기기 발송현황 카드">
+                            <p class="screenshot-caption">최근 60일 대체기기 발송현황</p>
+                        </div>
+                        <p>* 각 카드를 클릭하면 해당하는 발송건의 목록이 표시됩니다.</p>
+                        <p>* 목록에서 학습생 ID를 클릭하면 수정 모달창이 열립니다.</p>
+                        <div class="screenshot">
+                            <img src="https://raw.githubusercontent.com/skyhigh79/image_dashboard/main/dashboard_03.png" alt="발송건 상세 목록">
+                            <p class="screenshot-caption">카드 클릭 시 표시되는 발송건 목록</p>
+                        </div>
+                    </div>
+
+                        <div class="step" id="section-download">
+                            <h4>현황판 전체 내역 다운로드</h4>
+                        <p>'현황판 전체 내역 다운로드' 버튼을 클릭하면 대시보드의 내역을 Excel 파일로 다운로드할 수 있습니다.</p>
+                        <div class="screenshot">
+                            <img src="https://raw.githubusercontent.com/skyhigh79/image_dashboard/main/dashboard_04.png" alt="다운로드 버튼">
+                            <p class="screenshot-caption">현황판 전체 내역 다운로드 버튼</p>
+                            <img src="https://raw.githubusercontent.com/skyhigh79/image_dashboard/main/dashboard_05.png" alt="다운로드 확인 모달">
+                            <p class="screenshot-caption">다운로드된 파일명</p>
+                        </div>
+                        <p>* 다운로드된 파일을 실행한 후 '예'를 클릭하면 내용을 확인할 수 있습니다.</p>
+                        <p>* Excel 파일에 포함되는 내용은 최근 60일 대체기기 발송현황, 모니터링 필요 지연건, 소속 부서 발송건입니다.</p>
+                        <div class="screenshot">
+                            <img src="https://raw.githubusercontent.com/skyhigh79/image_dashboard/main/dashboard_06.png" alt="Excel 파일 경고">
+                            <p class="screenshot-caption">Excel 파일 실행 시 경고</p>
+                            <img src="https://raw.githubusercontent.com/skyhigh79/image_dashboard/main/dashboard_07.png" alt="Excel 파일 내용">
+                            <p class="screenshot-caption">Excel 파일 내용</p>
+                        </div>
+                    </div>
+
+                        <div class="step" id="section-delay">
+                            <h4>모니터링 필요 지연건</h4>
+                        <p>처리가 지연되어 확인이 필요한 발송건이 표시됩니다.</p>
+                        <p>현재 진행단계에서 7일 이상 경과된 건들이 해당됩니다.</p>
+                        <p>+ 버튼을 클릭하면 해당하는 발송건의 목록이 표시되며, 학습생 ID를 클릭하면 수정 모달창이 열립니다.</p>
+                        <div class="screenshot">
+                            <img src="https://raw.githubusercontent.com/skyhigh79/image_dashboard/main/dashboard_08.png" alt="모니터링 필요 지연건">
+                            <p class="screenshot-caption">모니터링 필요 지연건</p>   
+                            </div>
+                            <p>* 발송건 목록 모달창 우측 상단의 대체기기 목록으로 이동 버튼을 클릭하면 대체기기 목록으로 이동합니다.</p>
+                            <p>* 이 때 7일 이상 경과된 건들만 표시되도록 자동으로 필터가 적용됩니다.</p>
+                            <div class="screenshot">
+                            <img src="https://raw.githubusercontent.com/skyhigh79/image_dashboard/main/dashboard_13.png" alt="모니터링 필요 지연건 목록">  
+                            <p class="screenshot-caption">모니터링 필요 지연건 모달창</p>                         
+                        </div>
+                    </div>
+
+                        <div class="step" id="section-monthly">
+                            <h4>월별 발송 건수</h4>
+                        <p>현재 월을 기준으로 최근 3개월간의 대체기기 발송 현황을 보여주는 그래프입니다.</p>
+                        <p>최근 3개월과 작년 동일기간 3개월의 발송 건수를 비교할 수 있으며, 매달 1일이 되면 날짜에 맞게 자동으로 갱신됩니다.</p>
+                        <div class="screenshot">
+                            <img src="https://raw.githubusercontent.com/skyhigh79/image_dashboard/main/dashboard_09.png" alt="월별 발송 건수">
+                            <p class="screenshot-caption">월별 발송 건수 그래프</p>
+                        </div>
+                    </div>
+
+                        <div class="step" id="section-department">
+                            <h4>소속 부서 발송건</h4>
+                        <p>로그인된 사용자가 소속된 부서에서 발송한 건들을 확인할 수 있습니다.</p>
+                        <p>+ 버튼을 클릭하면 해당하는 발송건의 목록이 표시되며, 학습생 ID를 클릭하면 수정 모달창이 열립니다.</p>
+                        <div class="screenshot">
+                            <img src="https://raw.githubusercontent.com/skyhigh79/image_dashboard/main/dashboard_10.png" alt="소속 부서 발송건">
+                            <p class="screenshot-caption">소속 부서 발송건</p>
+                        </div>
+                    </div>
+
+                        <div class="step" id="section-notice">
+                            <h4>공지사항</h4>
+                        <p>관리자가 등록한 공지사항을 확인할 수 있습니다.</p>
+                        <p>게시물의 제목을 터치하면 열람 가능하며, 게시물 등록 및 수정은 관리자 권한이 있는 사용자만 가능합니다.</p>
+                        <div class="screenshot">
+                            <img src="https://raw.githubusercontent.com/skyhigh79/image_dashboard/main/dashboard_11.png" alt="공지사항 목록">
+                            <p class="screenshot-caption">공지사항</p>
+                            <img src="https://raw.githubusercontent.com/skyhigh79/image_dashboard/main/dashboard_12.png" alt="공지사항 상세">
+                            <p class="screenshot-caption">공지사항 조회 모달창</p>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/common.js"></script>
+</body>
+</html>

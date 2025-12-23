@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>등록 및 수정 가이드 - 대체기기 관리 시스템</title>
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 상단 헤더 -->
+        <header class="top-header">
+            <div class="header-left">
+                <h1>대체기기 관리 시스템</h1>
+                <span class="subtitle">사용 가이드</span>
+            </div>
+            <nav class="tab-menu">
+                <a href="index.html" class="tab-item">등록 및 수정</a>
+                <a href="dashboard.html" class="tab-item">대시보드</a>
+                <a href="entries.html" class="tab-item">대체기기 목록</a>
+            </nav>
+        </header>
+
+        <!-- 메인 컨텐츠 -->
+        <main class="main-content">
+            <!-- 왼쪽 목차 -->
+            <aside class="toc">
+                <nav class="toc-nav">
+                    <ul class="toc-list">
+                        <li><a href="#section-register" class="toc-link">등록하기</a></li>
+                        <li><a href="#section-edit" class="toc-link">수정하기</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- 오른쪽 컨텐츠 -->
+            <div class="content-wrapper">
+                <!-- 신규 등록 섹션 -->
+                <section class="section" id="section-register">
+                    <h3>신규 대체기기 발송 건 등록하기</h3>
+                
+                <div class="step-guide">
+                    <div class="step">
+                        <p>사이드바의 '등록' 버튼을 클릭합니다.</p>
+                        <div class="screenshot">
+                            <img src="https://raw.githubusercontent.com/skyhigh79/image_register/main/register_00.png" alt="등록 버튼">
+                            <p class="screenshot-caption">사이드바의 등록 버튼 위치</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <p>등록 모달창이 열리면 다음 정보를 입력합니다.</p>
+                        <ul>
+                            <li><strong>아이디:</strong> 학습생의 아이디</li>
+                            <li><strong>이름:</strong> 학습생의 이름</li>
+                            <li><strong>접수자:</strong> 발송 건을 접수한 담당자 이름</li>
+                            <li><strong>등록일:</strong> 자동으로 오늘 날짜가 입력됨</li>
+                            <li><strong>서비스:</strong> 학습생의 학년에 맞는 서비스 선택</li>
+                            <li><strong>요청내용:</strong> AS대행인지, 대체기기 발송인지 등 요청 목적에 맞게 선택</li>
+                            <li><strong>기종:</strong> S6 Lite와 A6 중 선택</li>
+                        </ul>
+                        <div class="screenshot">
+                            <img src="https://raw.githubusercontent.com/skyhigh79/image_register/main/register_01.png" alt="등록 모달창 1">
+                            <p class="screenshot-caption">등록 모달창(값 입력 전)</p>
+                            <img src="https://raw.githubusercontent.com/skyhigh79/image_register/main/register_02.png" alt="등록 모달창 2">
+                            <p class="screenshot-caption">등록 모달창(값 입력 후)</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <p>'등록하기' 버튼을 클릭하여 정보를 저장합니다.</p>
+                        <div class="screenshot">
+                            <img src="https://raw.githubusercontent.com/skyhigh79/image_register/main/register_03.png" alt="등록하기 버튼">
+                            <p class="screenshot-caption">정상 등록 완료</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <p>등록을 완료하면 자동으로 대체기기 목록으로 이동됩니다.</p>
+                        <p>* 해당 화면에서는 금일 접수된 기기 발송건만 보여지도록 필터가 적용되어 있습니다.</p>
+                        <p>* 학습생의 아이디를 클릭하면 수정 모달창이 열립니다.</p>
+                        <div class="screenshot">
+                            <img src="https://raw.githubusercontent.com/skyhigh79/image_register/main/register_04.png" alt="대체기기 목록">
+                            <p class="screenshot-caption">등록 후 자동 이동된 대체기기 목록</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+                <!-- 정보 수정 섹션 -->
+                <section class="section" id="section-edit">
+                    <h3>기존 정보 수정하기</h3>
+                
+                <div class="step-guide">
+                    <div class="step">
+                        <p>대체기기 목록 또는 대시보드에서 학습생 아이디를 클릭하면 수정 모달창이 열립니다.</p>
+                        <p>* 등록시 입력한 정보는 자동 노출되며, 배송 및 회수 일자는 직접 선택해야 합니다.</p>
+                        <div class="screenshot">
+                            <img src="https://raw.githubusercontent.com/skyhigh79/image_register/main/register_06.png" alt="수정 모달창">
+                            <p class="screenshot-caption">수정 모달창(상세 점검결과 옵션 비활성화)</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <p>점검결과 항목을 '무상' 또는 '유상'으로 선택하면 상세 점검결과에 옵션이 추가됩니다.</p>
+                        <p>* 각 점검결과 옵션의 의미는 다음과 같습니다.</p>
+                        <ul>
+                            <li><strong>없음:</strong> AS대상기 회수가 진행되지 않아 점검을 진행하지 않은 경우</li>
+                            <li><strong>정상:</strong> 정상 판정으로 수리가 진행되지 않은 경우</li>
+                            <li><strong>무상:</strong> 수리가 필요하지만 무상으로 진행되는 경우</li>
+                            <li><strong>유상:</strong> 유상 수리 판정으로 고객에게 안내가 필요한 경우</li>
+                        </ul>
+                        <div class="screenshot">
+                            <img src="https://raw.githubusercontent.com/skyhigh79/image_register/main/register_07.png" alt="점검결과 선택">
+                            <p class="screenshot-caption">수정 모달창(상세 점검결과 옵션 활성화)</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <p>필요한 값을 모두 입력하면 '수정하기' 버튼을 클릭하여 저장합니다.</p>
+                        <div class="screenshot">
+                            <img src="https://raw.githubusercontent.com/skyhigh79/image_register/main/register_08.png" alt="수정하기 버튼">
+                            <p class="screenshot-caption">수정하기 버튼 클릭시</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <p>오접수 등의 이유로 대체기기 발송 이력 자체를 삭제하려면 '삭제'버튼을 클릭합니다.</p>
+                        <p>* 삭제할 경우 해당 건은 더 이상 확인할 수 없으며, 복구도 불가능합니다.</p>
+                        <div class="screenshot">
+                            <img src="https://raw.githubusercontent.com/skyhigh79/image_register/main/register_09.png" alt="삭제 버튼">
+                            <p class="screenshot-caption">삭제 버튼 클릭시</p>
+                        </div>
+                    </div>
+                </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/common.js"></script>
+</body>
+</html>
+
